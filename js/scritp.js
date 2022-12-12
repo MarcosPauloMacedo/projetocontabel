@@ -12,10 +12,9 @@ let options = {
 
 fetch(linkApi,options)
     .then(response => {response.json()
-        .then(data => {(data)
-            console.log(data)
-            pesquisar.buscarId(data)
-        })
+       .then(data => {(data)
+      console.log(data)
+      pesquisar.buscarId(data)
+       })
     })
 .catch(e =>{console.log(`deu erro ${e}`)})
-

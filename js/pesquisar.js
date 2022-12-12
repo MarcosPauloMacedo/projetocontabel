@@ -24,19 +24,4 @@ export class Pesquisar{
             }
         }
     }
-
-    numeroDescricao(array){
-        let descricao = array[0].descricao
-        console.log(descricao)
-        let quantidade = 0
-
-        array.forEach((i,n)=>{
-            if(i.descricao != descricao){
-                descricao = i.descricao
-                quantidade++
-            }
-        })
-
-        console.log(quantidade)
-    }
 }
