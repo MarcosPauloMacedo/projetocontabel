@@ -1,3 +1,7 @@
+import { Lista } from "./Lista.js"
+
+const lista = new Lista()
+
 let id = document.querySelectorAll('.id')
 let dados = document.querySelectorAll('.dados')
 let anexo = document.querySelectorAll('.anexo')
@@ -26,11 +30,20 @@ function padronizarNumeros(array){
 
 function padronizarAnexo(string){
     string.forEach((n,i)=>{
-        console.log(n)
+        anexoFormatado.push(n.textContent)
     })
 }
 
-console.log(idFormatado)
-
-//padronizarNumeros(id)
+padronizarNumeros(id)
 padronizarAnexo(anexo)
+
+//console.log(anexoFormatado)
+let i = 0
+console.log(idFormatado.length)
+for(i;i < idFormatado.length ; i++){
+    lista.push(idFormatado[i],anexoFormatado[i])
+}
+
+lista.mostrarLista()
+
+

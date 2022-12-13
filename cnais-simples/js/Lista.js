@@ -1,4 +1,4 @@
-class Cnae{
+export class Lista{
     constructor(){
         this.codigo = {}
         this.contador = 0
@@ -7,22 +7,12 @@ class Cnae{
     push(id,codigo){
         this.codigo[this.contador] = {
             'id': id,
-            'cod': codigo
+            'anexo': codigo
         }
-
         this.contador++
     }
+
+    mostrarLista(){
+        console.table(this.codigo)
+    }
 }
-
-const cnae = new Cnae()
-
-let cod = {
-    'id': '11',
-    'cod': 'a'
-}
-
-cnae.push('33221','a')
-cnae.push('443321','b')
-
-console.table(cnae.codigo)
-

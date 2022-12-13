@@ -24,4 +24,18 @@ export class Pesquisar{
             }
         }
     }
+
+    contador(array){
+        let posicao1 = array[0].id
+        let quantidadeId = 0
+
+        array.forEach((i,n)=>{
+            if(i.id != posicao1){
+                quantidadeId++
+                posicao1 = i.id
+            }
+        })
+
+        console.log(quantidadeId)
+    }
 }
