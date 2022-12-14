@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <form class="formulario">
-        <input type="search" name="" class="pesquisar">
-        <button class="botao">Pesquisar</button>
-    </form>
-    <input class="resultado" type="textarea">
-    <textarea class="descricao" name="" id="" cols="30" rows="10"></textarea>
-
+    <header class="cabecalho">
+        <h1 class="titulo">Cnae web</h1>
+    </header>
+    <main class="principal">
+        <div class="caixa-pesquisa">
+            <form class="formulario">
+                <button class="botao">Pesquisar</button>
+                <input type="search" name="" class="pesquisar">
+            </form>
+            <input class="resultado" type="textarea">
+            <ul class="todas-descricao">
+                <li class="descricao"></li>
+            </ul>
+            </textarea>
+        </div>
+    </main>
     <script src="./js/scritp.js" type="module"></script>
 </body>
 </html>

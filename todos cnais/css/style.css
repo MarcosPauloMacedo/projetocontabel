@@ -1,3 +1,39 @@
+body{
+    height: 100vh;
+}
+.titulo{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.principal{
+   display: flex;
+   justify-content: center;
+}
+
+.caixa-pesquisa{
+    width: 70vw;
+    padding: 30px;
+    background: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario{
+    padding-bottom: 10px;
+}
+
 .resultado{
-    width: 90vw;
+    margin-bottom: 20px;
+}
+
+.descricao{
+    font-size: 12px;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }

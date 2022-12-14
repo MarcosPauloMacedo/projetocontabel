@@ -6,22 +6,37 @@ export class Pesquisar{
         this.form = this.buscar('.formulario')
         this.resultado = this.buscar('.resultado')
         this.pesquisa = this.buscar('.pesquisar')
+        this.todasDescricao = this.buscar('.todas-descricao')
         this.descricao = this.buscar('.descricao')
+    }
+
+    _criarDescricao(texto){
+        let p = document.createElement('li')
+        p.innerText = `* ${texto}`
+        p.classList.add('descricao')
+
+        this.todasDescricao.appendChild(p)
     }
 
     buscarId(array){
         this.form.onsubmit = (event)=>{
             event.preventDefault()
             let i = 0
-            for(i;i<array.length;i++){
-                console.log(this.pesquisa.value)
-                if(this.pesquisa.value == array[i].id){
-                    //console.log(array[i].descricao)
-                    this.resultado.value = array[i].classe.descricao
-                    this.descricao.value = array[i].observacoes[0]
-                    break
-                }
+
+            while (this.todasDescricao.hasChildNodes()) {
+              this.todasDescricao.removeChild(this.todasDescricao.firstChild);
             }
+
+            for(i;i<array.length;i++){
+                if(this.pesquisa.value == array[i].id){
+                    this.resultado.value = array[i].classe.descricao
+                    this._criarDescricao(array[i].atividades)
+                    
+                    if(array[i+1].id != this.pesquisa.value){
+                        break
+                    }  
+                }
+            }  
         }
     }
 
