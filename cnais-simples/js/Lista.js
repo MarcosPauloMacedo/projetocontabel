@@ -6,8 +6,8 @@ export class Lista{
 
     push(id,codigo){
         this.codigo[this.contador] = {
-            'id': id,
-            'anexo': codigo
+        'id': id,
+        'anexo': codigo
         }
         this.contador++
     }
@@ -16,3 +16,4 @@ export class Lista{
         console.table(this.codigo)
     }
 }
+
