@@ -1,6 +1,6 @@
 export class Lista{
     constructor(){
-        this.codigo = {}
+        this.codigo = []
         this.contador = 0
     }
 
@@ -13,6 +13,6 @@ export class Lista{
     }
 
     mostrarLista(){
-        console.table(this.codigo)
+        console.table(this.codigo[2].id)
     }
 }
